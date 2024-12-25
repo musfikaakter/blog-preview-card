@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* colors */
+    --yellow: rgb(244, 208, 78);
+    --blackish: rgb(17, 17, 17);
+    --grey: rgb(107, 107, 107);
+}
+
+.container {
+    background-color: var(--yellow);
+    height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+.box {
+    width: 20rem;
+    border: 1px solid var(--blackish);
+    border-radius: 1.25rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.4rem 0.4rem 0 var(--blackish);
+    padding: 1.3rem;
+    display: grid;
+    place-content: center;
+    gap: 1rem; 
+}
+
+.box__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    background-color: var(--yellow);
+    color: var(--blackish);
+    font-size: 0.75rem;
+    font-weight: 900;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.text-top {
+    color: var(--blackish);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--blackish);
+    transition: color 300ms;
+    cursor: pointer;
+}
+
+h1:hover {
+    color: var(--yellow);
+}
+
+.text-bottom {
+    color: var(--grey);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & img {
+        width: 2rem;
+        height: auto;
+    }
+
+    & h3 {
+        color: var(--blackish);
+        font-size: 0.875rem;
+        font-weight: 900;
+    }
+}
+
+@media (min-width: 48rem) {
+    .box {
+        width: 24rem;
+        gap: 1.5rem;
+        box-shadow: 0.5rem 0.5rem 0 var(--blackish);
+        padding: 1.4rem;
+    }
+
+    button,.text-top {
+        font-size: 0.875rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-bottom {
+        font-size: 1rem;
+    }
+}
